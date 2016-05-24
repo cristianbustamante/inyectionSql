@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <title>Prueba de SQL injection</title>
+    </head>
+    
+    <body>
+
+    <!-- 
+      Para el servicio post 
+
+      escenario normal para sql inyection 
+      10 or 1=1
+      cualquier cedula de la BASE DE DATOS 
+
+      ------------------------
+
+      Habilito los comando para que entre como una sola variable
+
+    -->
+
+
+    <form action="formulario.php" method="post">
+    <p>
+      Introduzca la cedula que dese buscar:
+      <br/><br/>
+      Cedula:<input type="text" name="cedula">
+      <br/><br/>
+      <input type="submit" value="Enviar">
+    </p>
+      
+    </form>
+
+     <!-- 
+       Para el servicio post 
+
+      escenario normal para sql inyection 
+      http://localhost/pruebaInyectionSQl/eliminar.php?cedula=10%20or%201%3D1
+      cualquier cedula de la BASE DE DATOS 
+
+      ------------------------
+
+      Habilito los comando para que entre como una sola variable
+
+     -->
+
+
+    <br/>
+    <form action="eliminar.php" method="get">
+    <p>
+      Introduzca el usuario a eliminar
+      <br/><br/>
+      Cedula:<input type="text" name="cedula">
+      <br/><br/>
+      <input type="submit" value="Eliminarlo">
+    </p>
+      
+    </form>
+
+    </body>
+</html>
